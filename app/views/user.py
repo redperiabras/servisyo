@@ -101,7 +101,7 @@ def signout():
 @userbp.route('/account')
 @login_required
 def account():
-    return render_template('user/account.html', title='Account')
+    return render_template('user/account.html', title='Account', current_user=current_user)
 
 
 @userbp.route('/forgot', methods=['GET', 'POST'])
