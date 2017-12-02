@@ -21,11 +21,21 @@
 	box-shadow: 0 1px 6px rgba(57,73,76,.35);
 }
 #fixedbutton {
+	border-radius: 50%;
+	padding: 0;
     position: fixed;
-    bottom: 10px;
-    right: 10px; 
+    bottom: 25px;
+    right: 25px; 
+}
+
+#fixedbutton:active, #fixedbutton:focus {
+	outline: none;
 }
 
 .map-btn {
 	border: 1px solid transparent;
+}
+
+.back-to-map {
+	text-decoration: none;
 }
