@@ -68,8 +68,7 @@ class SignUp(Form):
         'Gender',
         choices=[('M', 'Male'), ('F', 'Female')]
     )
-    profession = TextField(validators=[Required()],
-                      description='Profession')
+    profession = TextField(description='Profession')
     phone = TextField(validators=[Required(), Length(min=6)],
                       description='Phone number')
     email = TextField(validators=[Required(), Email(),
