@@ -4,3 +4,14 @@
 	background-color: #fff;
 	border-bottom: 1px solid lightgray;
 }
+
+.navigator-btn {
+	color: #ffbd2c;
+	background-color: #fff;
+	padding: 0;
+	border: 0;
+}
+
+.navigator-btn:focus, .navigator-btn:active {
+	outline: none;
+}
