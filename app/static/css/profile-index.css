@@ -1,0 +1,43 @@
+.profile-section {
+	padding: 20px;
+
+}
+
+h4 {
+	font-family: Montserrat;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #000;
+}
+
+h2 {
+	margin-top: 40px;
+	color: #135680;
+	font-family: Montserrat;
+	font-weight: bold;
+}
+
+.profile-content p {
+	color: #000;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+footer {
+	padding-top: 200px;
+}
+
+footer a {
+	text-decoration: none;
+	color: #FFBD2C;
+	font-family: montserrat;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: none;
+	font-weight: bolder;
+}

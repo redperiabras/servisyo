@@ -2,4 +2,38 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile-index.css') }}"/>
+
+<section class="profile-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<img class="img-responsive img-circle" src="./../static/img/team-leader-pic1.jpg">
+			</div>
+			<div class="col-md-4">
+				<h2>Juan Dela Cruz</h2>
+				<h4><span style="color: #CD2A00;"><i class="fa fa-map-marker" aria-hidden="true"></i></span> Makati, Philippines</h4>
+			</div>
+		</div>
+		
+		<div class="profile-content">
+			<h2>Plumber</h2>
+				<span style="color: #FFBD2C;">
+					<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" 	aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" 	aria-hidden="true"></i>
+				</span>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>	
+		</div>
+		
+		<footer>
+			<a href="#">Other services</a>
+		</footer>		
+
+
+	</div>	
+	
+</section>
+
 {% endblock %}

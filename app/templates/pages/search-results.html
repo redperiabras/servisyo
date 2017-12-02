@@ -1,1 +1,23 @@
 {% extends "./layout/base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search-result.css') }}"/>
+<section class="search-results-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<img class="img-responsive img-circle" src="../static/img/team-leader-pic1.jpg">
+			</div>
+			<div class="col-md-8">
+				<h3>Juan Dela Cruz</h3>
+				<h2>Plumber</h2>
+				<h3><span style="color: #CD2A00;"><i class="fa fa-map-marker" aria-hidden="true"></i></span> Makati, Philippines</h3>
+				<span style="color: #FFBD2C;"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2">
+				
+			</div>
+		</div>	
+	</div>
+</section>
+{% endblock %}
