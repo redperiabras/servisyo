@@ -70,12 +70,32 @@
 	color: #fff;
 }
 
-.search-board {
+/*.search-board {
 	width: 100%;
 	text-align: center;
 	background-color: #4a4a4a;
 	position: fixed;
 	bottom: 0;
+}*/
+
+.search-board {
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	position: fixed;
+	top: 40%;
+}
+
+.search-board-container {
+	position: fixed;
+	top: 60px;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+}
+
+.search-board input[type=text] {
+	padding: 5px;	
 }
 
 .search-btn {
