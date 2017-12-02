@@ -7,7 +7,7 @@ from app.config_common import *
 DEBUG = False
 
 # Secret key for generating tokens
-SECRET_KEY = 'houdini'
+SECRET_KEY = 'servisyo_mnl'
 
 # Admin credentials
 ADMIN_CREDENTIALS = ('admin', 'pa$$word')
@@ -21,9 +21,9 @@ MAIL_SERVER = 'smtp.googlemail.com'
 MAIL_PORT = 465
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
-MAIL_USERNAME = 'flask.boilerplate'
-MAIL_PASSWORD = 'flaskboilerplate123'
-ADMINS = ['flask.boilerplate@gmail.com']
+MAIL_USERNAME = 'servisyo.mnl'
+MAIL_PASSWORD = 'p@$$word'
+ADMINS = ['servisyo.mnl@gmail.com']
 
 # Number of times a password is hashed
 BCRYPT_LOG_ROUNDS = 12
