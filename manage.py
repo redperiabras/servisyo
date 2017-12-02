@@ -129,8 +129,7 @@ def initdb():
             confirmation=['user'],
             password=user['password'],
             geolat=user['geolat'],
-            geolng=user['geolng']
-        )
+            geolng=user['geolng'])
 		db.session.add(user)
 
 	db.session.commit()
