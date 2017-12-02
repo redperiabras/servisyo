@@ -22,32 +22,33 @@
 
 	</head>
 
-	<body id="container">
+	<body id="container" class="cbp-spmenu-push">
+		
 		{% if current_user.is_authenticated %}
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="side-navigation">
+
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
 				<h3>Servisyo</h3>
-				<a href="/">Home</a>
 				<a href="/user/account">My Profile</a>
 				<a href="#">Requests</a>
 				<a href="/user/signout">Sign Out</a>
 			</nav>
-			<div class="top-nav">
-				<button id="showRight" class="navigator-btn">
+			<div class="top-nav text-right">
+				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>
 			</div>
 
 		{% else %}
 
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="side-navigation">
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
 				<h3>Servisyo</h3>
 				<a href="#">I am...</a>
 				<a href="#">I need...</a>
 				<a href="/user/signin">Sign In</a>
 				<a href="/user/signup">Sign Up</a>
 			</nav>
-			<div class="top-nav">
-				<button id="showRight" class="navigator-btn">
+			<div class="top-nav text-right">
+				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>
 			</div>
@@ -78,14 +79,17 @@
 		<script src="{{ url_for('static', filename='js/cbp.js') }}"></script> -->
 
 		<script>
-			var menuRight = document.getElementById( 'side-navigation' ),
+			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRight = document.getElementById( 'showRight' ),
 				showRightPush = document.getElementById( 'showRightPush' ),
 				body = document.body;
 
-				showRight.onclick = function() {
-					classie.toggle( this, 'active' );
-					classie.toggle( menuRight, 'cbp-spmenu-open' );
-				};
+			showRightPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toleft' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+			};
+
 		</script>
 
 
