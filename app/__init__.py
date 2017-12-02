@@ -27,9 +27,9 @@ from flask.ext.bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
 # Import the views
-from app.views import main, user, error
+from app.views import main, user, error, endpoint
 app.register_blueprint(user.userbp)
-
+app.register_blueprint(endpoint.endpoint)
 # Setup the user login process
 from flask.ext.login import LoginManager
 from app.models import User
