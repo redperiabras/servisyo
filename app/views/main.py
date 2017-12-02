@@ -27,10 +27,6 @@ def searh_results():
 def search():
     return render_template('pages/search.html', title='Search')
 
-@app.route('/profile')
-def profile():
-    return render_template('pages/profile/index.html', title='Profile')
-
 @app.route('/profile/reviews')
 def profile_reviews():
     return render_template('pages/profile/reviews.html', title='Reviews')
