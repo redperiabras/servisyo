@@ -16,6 +16,8 @@ ADMIN_CREDENTIALS = ('admin', 'pa$$word')
 SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
+DEBUG_TB_INTERCEPT_REDIRECTS = False
+
 # Configuration of a Gmail account for sending mails
 MAIL_SERVER = 'smtp.googlemail.com'
 MAIL_PORT = 465
