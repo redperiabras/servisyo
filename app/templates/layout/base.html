@@ -23,16 +23,19 @@
 	</head>
 
 	<body id="container" class="cbp-spmenu-push">
-		
+
 		{% if current_user.is_authenticated %}
 
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-				<h3>Servisyo</h3>
-				<a href="/user/account">My Profile</a>
+				<div class="side-top">
+					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp" />
+				</div>
+				<a href="/user/account" class="text-center">My Profile</a>
 				<a href="#">Requests</a>
 				<a href="/user/signout">Sign Out</a>
 			</nav>
 			<div class="top-nav text-right">
+				<img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" />
 				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>
@@ -41,13 +44,13 @@
 		{% else %}
 
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-				<h3>Servisyo</h3>
 				<a href="#">I am...</a>
 				<a href="#">I need...</a>
 				<a href="/user/signin">Sign In</a>
 				<a href="/user/signup">Sign Up</a>
 			</nav>
 			<div class="top-nav text-right">
+				<img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" />
 				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>

@@ -17,3 +17,30 @@
 .navigator-btn:focus, .navigator-btn:active {
 	outline: none;
 }
+
+.proj-logo {
+	height: 20px;
+	width: 100px;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+#cbp-spmenu-s2 {
+	background-color: #fff;
+	box-shadow: 0 -15px 5px grey;
+}
+
+.side-top {
+	background-color: #fff;
+	height: 200px;
+}
+
+.dp {
+	height: 150px;
+	width: 150px;
+	margin: 50px 0 20px 45px;
+}
+
+#cbp-spmenu-s2 a {
+	color: #000;
+}
