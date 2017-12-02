@@ -98,10 +98,10 @@ def signout():
     return redirect(url_for('index'))
 
 
-@userbp.route('/account')
-@login_required
-def account():
-    return render_template('user/account.html', title='Account', current_user=current_user)
+@userbp.route('/profile/<string:user>')
+def profile(user):
+    user = models.User.query.filter_by(email=user).first()
+    return render_template('pages/profile/index.html', title='Profile', user=user)
 
 
 @userbp.route('/forgot', methods=['GET', 'POST'])
@@ -153,9 +153,9 @@ def reset(token):
             return redirect(url_for('userbp.forgot'))
     return render_template('user/reset.html', form=form, token=token)
 
-@userbp.route('/', methods=['GET'])
-def users():
-    users = models.User.query.filter(models.User.email!=current_user.get_id()).all()
-    users = [user.to_json() for user in users]
-    return jsonify(users)
+# @userbp.route('/', methods=['GET'])
+# def users():
+#     users = models.User.query.filter(models.User.email!=current_user.get_id()).all()
+#     users = [user.to_json() for user in users]
+#     return jsonify(users)
  
