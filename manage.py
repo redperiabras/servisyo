@@ -15,8 +15,8 @@ def make_shell_context():
 def initdb():
     ''' Create the SQL database. '''
     db.create_all()
+    
     print(colored('The SQL database has been created', 'green'))
-
 
 @manager.command
 def dropdb():

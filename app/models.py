@@ -14,7 +14,10 @@ class User(db.Model, UserMixin):
     last_name = db.Column(db.String)
     phone = db.Column(db.String)
     email = db.Column(db.String, primary_key=True)
+    gender = db.Column(db.String)
     confirmation = db.Column(db.Boolean)
+    geolat = db.Column(db.String)
+    geolng = db.Column(db.String)
     _password = db.Column(db.String)
 
     @property

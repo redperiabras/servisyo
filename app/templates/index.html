@@ -1,83 +1,83 @@
 {% extends "layout/base.html" %}
 
 {% block head %}
-    {{ super() }}
-     <!-- Leaflet JS -->
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
-    <!-- Leaflet CSS -->
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet'/>
-    <!-- Map style -->
-    <style>
-    #map {
-    	height: 600px;
-    }
-    </style>
+	{{ super() }}
+	<style>
+	   #map {
+			height: 400px;
+			width: 100%;
+	   }
+	</style>
 {% endblock %}
 
 {% block content %}
 
 	 <h1 class="ui header">{{ title }}</h1>
 
-    {% if current_user.is_authenticated %}
-        <h2 class="ui header">Hi {{ current_user.name }}!</h2>
-    {% endif %}
+	{% if current_user.is_authenticated %}
+		<h2 class="ui header">Hi {{ current_user.name }}!</h2>
+	{% endif %}
 
-    <div id="map"></div>
-    
-    <script type="text/javascript">
+	<div id="map"></div>
+	<script>
 
-        L.mapbox.accessToken = 'pk.eyJ1IjoibGVtYXgiLCJhIjoidnNDV1kzNCJ9.iH26jLhEuimYd6vLOO6v1g';
-        var map = L.mapbox.map('map', 'mapbox.outdoors', {
-            maxZoom: 20,
-            fullscreenControl: true,
-            zoomControl: false
-        })
-        var layers = {
-            "Baisc": L.mapbox.tileLayer('mapbox.outdoors').addTo(map),
-            "Light": L.mapbox.tileLayer('mapbox.light'),
-            "Dark": L.mapbox.tileLayer('mapbox.dark'),
-            "Comics": L.mapbox.tileLayer('mapbox.comic'),
-            "Pencil": L.mapbox.tileLayer('mapbox.pencil')
-        }
-        L.control.layers(
-            layers,
-            null,
-            {position: 'topleft'}
-        ).addTo(map);
+	function initMap() {
+		var uluru = {lat: 14.5513402, lng: 120.9871093};
+		var map = new google.maps.Map(document.getElementById('map'), {
+		  zoom: 20,
+		  center: uluru
+		});
+		
+	}
 
-        point = [14.5504938,120.9896386];
+	function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
 
-        map.setView({{}}, 13);
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
-        markers = [];
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+            map.setZoom(15);
 
-        function remove_points(points){
-            for (i in points){
-                map.removeLayer(points[i])
-            }
-        }
+            var marker = new google.maps.Marker({
+			  position: pos,
+			  map: map
+			});
 
-        function refresh_points(){
-            $.ajax({
-                type: "POST",
-                async: true,
-                url: "/map/refresh"
-            }).done(function(response){
-                remove_points(markers);
-                points = response.points;
-                for (i in points){
-                    marker = L.marker(points[i]);
-                    markers.push(marker);
-                    marker.addTo(map);
-                }
-            });
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
         }
 
-        refresh_points();
-        window.setInterval(function(){
-            refresh_points();
-        }, 1000);
 
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
     </script>
-    
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BM7sr0ZQkYiZbUdOxzNtKEWQPJBUp0M&callback=initMap">
+	</script>
+	
 {% endblock %}
