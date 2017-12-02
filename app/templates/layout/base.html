@@ -19,6 +19,7 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}"/>
 
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/servisyo.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}"/>
 
 	</head>
 
@@ -30,7 +31,7 @@
 				<div class="side-top">
 					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp" />
 				</div>
-				<a href="/user/account" class="text-center">My Profile</a>
+				<a href="/user/account" class="text-center">{{ current_user.first_name}} {{current_user.last_name}}</a>
 				<a href="#">Requests</a>
 				<a href="/user/signout">Sign Out</a>
 			</nav>
