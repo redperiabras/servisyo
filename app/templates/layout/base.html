@@ -2,32 +2,27 @@
 {% import "macros.html" as m %}
 <html lang="en">
 
+	<head>
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+		<title>{{ title }}</title>
+
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/vue.js') }}"></script>
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
+	</head>
+
 	<body id="container">
    		<div id="header">
    			{% block head %}
-				<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
-				<meta charset="UTF-8">
-				<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
-
-				<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-				<script src="{{ url_for('static', filename='js/vue.js') }}"></script>
-				
-				<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
-				<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
-				<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
-
-				<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/semantic.min.css') }}"/>
-				<link rel="stylesheet" href="{{ url_for('static', filename='css/reset.min.css') }}"/>
-				<link rel="stylesheet" href="{{ url_for('static', filename='css/menu.min.css') }}"/>
-			    <script src="{{ url_for('static', filename='js/semantic.min.js') }}"></script>
-				<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}"> -->
-
-				<title>{{ title }}</title>
-
 				<!-- Navbar -->
 				<div class="ui attached inverted menu">
 				  	{{ m.nav_link('index', 'Home') }}
-					{{ m.nav_link('contact', 'Contact') }}
 				 	<div class="right menu">
 				 		<!-- User is logged in -->
 				      	{% if current_user.is_authenticated %}
@@ -78,7 +73,7 @@
 		</div>
 
 		{% block scripts %}
-		{% endblock scripts %}
+		{% endblock %}
 
 		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 

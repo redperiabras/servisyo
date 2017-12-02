@@ -4,15 +4,8 @@ import random
 
 
 @app.route('/')
-@app.route('/index')
 def index():
     return render_template('index.html', title='Home')
-
-
-@app.route('/map')
-def map():
-    return render_template('map.html', title='Map')
-
 
 @app.route('/map/refresh', methods=['POST'])
 def map_refresh():
@@ -21,7 +14,26 @@ def map_refresh():
               for _ in range(random.randint(2, 9))]
     return jsonify({'points': points})
 
+@app.route('/qoute')
+def qoute():
+    return render_template('pages/qoute.html', title='Quotation')
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html', title='Contact')
+@app.route('/search-results')
+def searh_results():
+    return render_template('pages/search-results.html', title='Search Results')
+
+@app.route('/search')
+def search():
+    return render_template('pages/search.html', title='Search')
+
+@app.route('/profile')
+def profile():
+    return render_template('pages/profile/index.html', title='Profile')
+
+@app.route('/profile/reviews')
+def profile_reviews():
+    return render_template('pages/profile/services.html', title='Reviews')
+
+@app.route('/profile/services')
+def profile_services():
+    return render_template('pages/profile/reviews.html', title='Services')
