@@ -3,7 +3,7 @@
 	height: 50px;
 	background-color: #fff;
 	/*border-bottom: 1px solid lightgray;*/
-	box-shadow: 20px 0 20px lightgray;
+	box-shadow: 0 0 20px lightgray;
 }
 
 .navigator-btn {
@@ -85,4 +85,5 @@
 	bottom: 50px;
 	background-color: blue;
 	left: 40%;
+	box-shadow: 0 8px 7px gray;
 }
