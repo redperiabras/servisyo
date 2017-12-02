@@ -10,6 +10,8 @@
 				<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
 				<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+				<script src="{{ url_for('static', filename='js/vue.js') }}"></script>
+				
 				<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
 				<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
 				<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
@@ -74,6 +76,11 @@
 	    		</div>
 	  		</div>
 		</div>
+
+		{% block scripts %}
+		{% endblock scripts %}
+
+		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
 	</body>
 
