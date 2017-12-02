@@ -10,7 +10,7 @@ DEBUG = True
 SECRET_KEY = 'servisyo_mnl'
 
 # Admin credentials
-ADMIN_CREDENTIALS = ('admin', 'pa$$word')
+ADMIN_CREDENTIALS = ('admin', '12345')
 
 # Database choice
 SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
