@@ -1,6 +1,6 @@
 from flask import (Blueprint, render_template, redirect, url_for,
-                   abort, flash)
-from flask.ext.login import login_user, logout_user, login_required
+                   abort, flash, jsonify)
+from flask.ext.login import login_user, logout_user, login_required, current_user
 from itsdangerous import URLSafeTimedSerializer
 from app import app, models, db
 from app.forms import user as user_forms
@@ -155,5 +155,7 @@ def reset(token):
 
 @userbp.route('/', methods=['GET'])
 def users():
-    return [user.to_json() for user in models.user.query.all()]
-    
+    users = models.User.query.filter(models.User.email!=current_user.get_id()).all()
+    users = [user.to_json() for user in users]
+    return jsonify(users)
+ 
