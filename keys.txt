@@ -1,2 +1,15 @@
 google api key = AIzaSyD2BM7sr0ZQkYiZbUdOxzNtKEWQPJBUp0M
+ubank secret = C2kQ1uH2bJ1fY5jJ0mP1sQ5qU6wD7dL3xU1dI0sB1uW6cI8fP7
+ubank id = 606f2098-9803-4d70-878d-0a08ab3c1f15
 
+curl https://api-uat.unionbankph.com/partners/sb/sandbox/v1/accounts \
+  -H'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'x-ibm-client-id: 606f2098-9803-4d70-878d-0a08ab3c1f15' \
+  -H 'x-ibm-client-secret: C2kQ1uH2bJ1fY5jJ0mP1sQ5qU6wD7dL3xU1dI0sB1uW6cI8fP7' \
+  -X POST \
+  -d '{
+        "username":"lesterverceles",
+        "password":"123456",
+        "account_name":"Lester Verceles"
+      }'

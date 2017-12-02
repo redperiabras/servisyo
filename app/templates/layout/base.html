@@ -32,8 +32,8 @@
 					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp" />
 				</div>
 				<a href="/user/account" class="text-center">{{ current_user.first_name}} {{current_user.last_name}}</a>
-				<a href="/user/link" class="text-center">Link UnionBank Account</a>
-				<a href="#">Requests</a>
+				<a href="/user/link">Link UnionBank Account</a>
+				<a href="/services?type={{ current_user.profession }}">Service Requests</a>
 				<a href="/user/signout">Sign Out</a>
 			</nav>
 			<div class="top-nav text-right">
