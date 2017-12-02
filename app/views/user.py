@@ -27,6 +27,8 @@ def signup():
             email=form.email.data,
             confirmation=False,
             password=form.password.data,
+            geolat=14.5513402,
+            geolng=120.9871093
         )
         # Insert the user in the database
         db.session.add(user)
