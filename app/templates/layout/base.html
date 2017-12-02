@@ -11,51 +11,35 @@
 
 		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/vue.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/cbp.js') }}"></script>
 		
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/cbp.css') }}"/>
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/component.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}"/>
 	</head>
 
 	<body id="container">
-   		<div id="header">
-   			{% block head %}
-				<!-- Navbar -->
-				<div class="ui attached inverted menu">
-				  	{{ m.nav_link('index', 'Home') }}
-				 	<div class="right menu">
-				 		<!-- User is logged in -->
-				      	{% if current_user.is_authenticated %}
-				      		<div class="item">
-				        		<a class="ui primary button" href="/user/account">{{ current_user.full_name }}</a>
-				    		</div>
-				    		<div class="item">
-				        		<a class="ui default button" href="/user/signout">Sign out</a>
-				    		</div>
-			          	<!-- User is not logged in -->
-			          	{% else %}
-			          		<div class="item">
-				        		<a class="ui primary button" href="/user/signin">Sign in</a>
-				    		</div>
-				    		<div class="item">
-				        		<a class="ui default button" href="/user/signup">Sign up</a>
-				    		</div>
-						{% endif %}
-			  		</div>
-				</div>
-			{% endblock %}
-   		</div>
 
-   		<!-- Message flashing -->
-		{% with messages = get_flashed_messages(with_categories=true) %}
-		  	{% if messages %}
-		    	<ul>
-		    		{% for category, message in messages %}
-		      			<li class="ui {{ category }} message flash">{{ message }}</li>
-		    		{% endfor %}
-		    	</ul>
-		  	{% endif %}
-		{% endwith %}
+		<div class="cbp-spmenu-push">
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="side-navigator">
+				<h3>Menu</h3>
+				<a href="#">Celery seakale</a>
+				<a href="#">Dulse daikon</a>
+				<a href="#">Zucchini garlic</a>
+				<a href="#">Catsear azuki bean</a>
+				<a href="#">Dandelion bunya</a>
+				<a href="#">Rutabaga</a>
+			</nav>
+			<div class="container">
+				<header class="clearfix">
+						<button id="showRight">Show/Hide Right Slide Menu</button>
+				</header>
+			</div>
+		</div>
+
    		<div id="body" class="body">
    			{% block content %}{% endblock %}
    		</div>
@@ -76,6 +60,7 @@
 		{% endblock %}
 
 		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/classie.js') }}"></script>
 
 	</body>
 
