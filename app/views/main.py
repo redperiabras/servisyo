@@ -21,7 +21,40 @@ def qoute():
 
 @app.route('/search-results')
 def searh_results():
-    return render_template('pages/search-results.html', title='Search Results')
+    results = [
+        {
+            "first_name": "Stanleigh",
+            "last_name": "Kinrade",
+            "gender": "M",
+            "profession": "Mechanic",
+            "needs": "Mechanic",
+            "lat": 14.553783,
+            "lng": 120.992063,
+            "email": "stanleigh@gmail.com"
+        }, 
+        {
+            "first_name": "Syd",
+            "last_name": "Jehaes",
+            "gender": "M",
+            "profession": "Mechanic",
+            "needs": "Mechanic",
+            "lat": 14.551825, 
+            "lng": 120.991383,
+            "email": "syd@gmail.com"
+        },
+        {
+            "first_name": "Dorree",
+            "last_name": "Pluck",
+            "gender": "F",
+            "profession": "Mechanic",
+            "needs": "Housekeeper",
+            "lat": 14.552051, 
+            "lng": 120.992116,
+            "email": "dorree@gmail.com"
+        }
+    ]
+
+    return render_template('pages/search-results.html', title='Search Results', results=results)
 
 @app.route('/search')
 def search():

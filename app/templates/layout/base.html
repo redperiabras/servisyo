@@ -31,10 +31,12 @@
 				<div class="side-top">
 					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp img-circle" />
 				</div>
-				<a href="{{ url_for('userbp.profile', user=current_user) }}" class="text-center"><b>{{ current_user.first_name}} {{current_user.last_name}}</b></a>
+				<a href="{{ url_for('userbp.profile', user=current_user) }}" class="text-center">
+					<b>{{ current_user.first_name}} {{current_user.last_name}}</b>
+				</a>
 				<a href="/services?type={{ current_user.profession }}">Service Requests<span class="fa fa-bell pull-right"></span></a>
 				<a href="/user/signout">Sign Out<span class="fa fa-sign-out pull-right"></span></a>
-			</nav>
+			</nav>			
 			<div class="top-nav text-right">
 				<a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" /></a>
 				<button id="showRightPush" class="navigator-btn">
@@ -45,8 +47,6 @@
 		{% else %}
 
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-				<!-- <a href="#">I am...</a>
-				<a href="#">I need...</a> -->
 				<a href="/user/signin">Sign In</a>
 				<a href="/user/signup">Sign Up</a>
 			</nav>

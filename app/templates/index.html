@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<div class="search-board">
-		<a href="/search">
+		<a href="/search-results">
 			<div class="search-btn text-center">
 				<span class="fa fa-search" style="background-color: #ee7c18;"></span>
 			</div>
@@ -94,25 +94,6 @@
 			  "lng": 120.991383,
 			   "email": "syd@gmail.com"
 			}];
-
-		document.getElementById('need').addEventListener("keypress", function(data){
-
-			users.forEach(function(user){
-				if(user.needs == data){
-					document.getElementByClass('earch-board-container').style.color = "rgba(0,0,0,0)";
-					var marker = new google.maps.Marker({
-						position: {lat: 14.551335, lng: 120.9871093},
-						animation: google.maps.Animation.BOUNCE,
-						map: map
-					});
-				}
-			});
-
-		}, false);
-
-		document.getElementById('am').addEventListener("keypress", function(){
-
-		}, false);
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 14.551335, lng: 120.9871093},
