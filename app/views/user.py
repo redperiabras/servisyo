@@ -155,5 +155,5 @@ def reset(token):
 
 @userbp.route('/', methods=['GET'])
 def users():
-    models.user.query.all()
+    return [user.to_json() for user in models.user.query.all()]
     

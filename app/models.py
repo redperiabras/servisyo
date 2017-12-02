@@ -39,3 +39,19 @@ class User(db.Model, UserMixin):
     def get_id(self):
         return self.email
 
+    def to_json(self):
+        json_post = {
+            'email'           : self.emal,
+            'first_name'    : self.first_name,
+            'last_name'     : self.last_name,
+            'email'        : self.email,
+            'password': self.password,
+            'profession'     : self.profession,
+            'gender'     : self.gender,
+            'geolat'      : self.geolat,
+            'geolng'        : self.geolng,
+            'phone': self.phone,
+            'gender': self.gender
+        }
+        return json_post
+
