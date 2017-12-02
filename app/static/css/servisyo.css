@@ -81,37 +81,40 @@
 .search-board {
 	width: 100%;
 	text-align: center;
-	background-color: #fff;
+	background-color: none;
 	position: fixed;
-	top: 40%;
+	top: 50%;
 }
 
 .search-board-container {
 	position: fixed;
 	top: 60px;
 	height: 100%;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.9);
 	width: 100%;
 }
 
 .search-board input[type=text] {
 	padding: 5px;	
+	margin: 5px;
+	border-radius: 3px;
+	border: 0;
 }
 
 .search-btn {
 	height: 70px;
 	width: 70px;
 	border-radius: 50%;
-	background-color: #fff;
-	color: #ffbd2c;
-	border: 5px solid #ffbd2c;
+	background-color: #ee7c18;
+	color: #fff;
+	border: 5px solid #ee7c18;
 	padding: 3px;
 	font-size: 35px;
 	position: fixed;
-	bottom: 50px;
-	background-color: blue;
+	bottom: 100px;
+	/*background-color: blue;*/
 	left: 40%;
-	box-shadow: 0 8px 7px gray;
+	box-shadow: 0 5px 3px gray;
 }
 
 .name-link {
