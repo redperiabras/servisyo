@@ -3,11 +3,14 @@
 }
 
 .input-group {
-	margin-top: 150px;
+	margin-top: 10px;
+	position: absolute;
+	width: 90%;
+	top: 40%;
 }
 
 .input-group-btn {
-	border-color: #FFBD2C;
+	/*border-color: #FFBD2C;*/
 	box-shadow: 0 1px 6px rgba(57,73,76,.35);
 }
 
