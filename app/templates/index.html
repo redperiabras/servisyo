@@ -26,6 +26,7 @@
 			  "last_name": "Dawidman",
 			  "gender": "M",
 			  "profession": "Mechanic",
+			  "needs": "Laundress",
 			  "lat": 14.551211,
 			  "lng": 120.991646,
 			  "email": "roddy@gmail.com"
@@ -34,6 +35,7 @@
 			  "last_name": "Martynikhin",
 			  "gender": "F",
 			  "profession": "Laundress",
+			  "needs": "Mechanic",
 			  "lat": 14.5537202,
 			  "lng": 120.9873491,
 			  "email": "odele@gmail.com"
@@ -42,6 +44,7 @@
 			  "last_name": "Emor",
 			  "gender": "F",
 			  "profession": "Housekeeper",
+			  "needs": "Carpenter",
 			  "lat": 14.550195, 
 			  "lng": 120.990644,
 			   "email": "karyn@gmail.com"
@@ -50,6 +53,7 @@
 			  "last_name": "Blondel",
 			  "gender": "M",
 			  "profession": "Carpenter",
+			  "needs": "Housekeeper",
 			  "lat": 14.550266,
 			  "lng": 120.991943,
 			   "email": "wesley@gmail.com"
@@ -58,6 +62,7 @@
 			  "last_name": "Seymer",
 			  "gender": "M",
 			  "profession": "Mechanic",
+			  "needs": "Housekeeper",
 			  "lat": 14.551674, 
 			  "lng": 120.991495,
 			   "email": "yardley@gmail.com"
@@ -66,6 +71,7 @@
 			  "last_name": "Kinrade",
 			  "gender": "M",
 			  "profession": "Welder",
+			  "needs": "Housekeeper",
 			  "lat": 14.553783,
 			  "lng": 120.992063,
 			  "email": "stanleigh@gmail.com"
@@ -74,6 +80,7 @@
 			  "last_name": "Pluck",
 			  "gender": "F",
 			  "profession": "Shoemaker",
+			  "needs": "Housekeeper",
 			  "lat": 14.552051, 
 			  "lng": 120.992116,
 			   "email": "dorree@gmail.com"
@@ -82,11 +89,30 @@
 			  "last_name": "Jehaes",
 			  "gender": "M",
 			  "profession": "Plumber",
+			  "needs": "Mechanic",
 			  "lat": 14.551825, 
 			  "lng": 120.991383,
 			   "email": "syd@gmail.com"
 			}];
 
+		document.getElementById('need').addEventListener("keypress", function(data){
+
+			users.forEach(function(user){
+				if(user.needs == data){
+					document.getElementByClass('earch-board-container').style.color = "rgba(0,0,0,0)";
+					var marker = new google.maps.Marker({
+						position: {lat: 14.551335, lng: 120.9871093},
+						animation: google.maps.Animation.BOUNCE,
+						map: map
+					});
+				}
+			});
+
+		}, false);
+
+		document.getElementById('am').addEventListener("keypress", function(){
+
+		}, false);
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 14.551335, lng: 120.9871093},
