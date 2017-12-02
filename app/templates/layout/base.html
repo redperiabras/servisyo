@@ -24,6 +24,7 @@
 
 	<body id="container" class="cbp-spmenu-push">
 		{% if current_user.is_authenticated %}
+<<<<<<< HEAD
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
 			<h3>Servisyo</h3>
 			<a href="/user/account">My Profile</a>
@@ -35,6 +36,35 @@
 				<span class="fa fa-reorder"></span>
 			</button>
 		</div>
+=======
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="side-navigation">
+				<h3>Servisyo</h3>
+				<a href="/user/account">My Profile</a>
+				<a href="#">Requests</a>
+				<a href="/user/signout">Sign Out</a>
+			</nav>
+			<div class="top-nav">
+				<button id="showRight" class="navigator-btn">
+					<span class="fa fa-reorder"></span>
+				</button>
+			</div>
+
+		{% else %}
+
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="side-navigation">
+				<h3>Servisyo</h3>
+				<a href="#">I am...</a>
+				<a href="#">I need...</a>
+				<a href="/user/signin">Sign In</a>
+				<a href="/user/signup">Sign Up</a>
+			</nav>
+			<div class="top-nav">
+				<button id="showRight" class="navigator-btn">
+					<span class="fa fa-reorder"></span>
+				</button>
+			</div>
+
+>>>>>>> 2c5e2760890396690d858d393fd24455a3b5bfca
 		{% endif %}
 
    		<div id="body" class="body">
