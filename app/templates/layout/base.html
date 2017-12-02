@@ -29,7 +29,7 @@
 
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
 				<div class="side-top">
-					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp" />
+					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp img-circle" />
 				</div>
 				<a href="/user/account" class="text-center">{{ current_user.first_name}} {{current_user.last_name}}</a>
 				<a href="/user/link">Link UnionBank Account</a>
@@ -37,7 +37,7 @@
 				<a href="/user/signout">Sign Out</a>
 			</nav>
 			<div class="top-nav text-right">
-				<img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" />
+				<a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" /></a>
 				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>
@@ -52,7 +52,7 @@
 				<a href="/user/signup">Sign Up</a>
 			</nav>
 			<div class="top-nav text-right">
-				<img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" />
+				<a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" /></a>
 				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>
@@ -63,7 +63,9 @@
    		<div id="body" class="body">
    			{% block content %}{% endblock %}
    		</div>
-		<div id="footer">
+		
+
+		<!-- <div id="footer">
 			<div class="ui divider"></div>
 	    		<div class="ui divided horizontal footer link list">
 			      	<div class="item">
@@ -75,7 +77,7 @@
 	    		</div>
 	  		</div>
 		</div>
-
+ -->
 		{% block scripts %}
 		{% endblock %}
 

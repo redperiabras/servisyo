@@ -1,24 +1,16 @@
 {% extends "layout/base.html" %}
 
-{% block head %}
-	{{ super() }}
-	<style>
-	   #map {
-			height: 400px;
-			width: 100%;
-	   }
-	</style>
-{% endblock %}
 
 {% block content %}
 
-	 <h1 class="ui header">{{ title }}</h1>
-
-	{% if current_user.is_authenticated %}
-		<h2 class="ui header">Hi {{ current_user.name }}!</h2>
-	{% endif %}
-
 	<div id="map"></div>
+	<div class="search-board">
+		<a href="/search">
+			<div class="search-btn text-center" style="background-color: #fff;">
+				<span class="fa fa-search"></span>
+			</div>
+		</a>
+	</div>
 	<script>
 
 	function initMap() {
