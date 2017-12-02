@@ -43,7 +43,7 @@
 }
 
 #cbp-spmenu-s2 a {
-	color: #000;
+	color: gray;
 	text-decoration: none;
 }
 
@@ -91,4 +91,8 @@
 .name-link {
 	color: #4a4a4a;
 	text-decoration: none;
+}
+
+.cbp-spmenu-vertical a {
+	border-bottom: 0;
 }
