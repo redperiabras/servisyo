@@ -33,8 +33,8 @@ def profile():
 
 @app.route('/profile/reviews')
 def profile_reviews():
-    return render_template('pages/profile/services.html', title='Reviews')
+    return render_template('pages/profile/reviews.html', title='Reviews')
 
 @app.route('/profile/services')
 def profile_services():
-    return render_template('pages/profile/reviews.html', title='Services')
+    return render_template('pages/profile/services.html', title='Services')
