@@ -104,6 +104,12 @@ def profile(user):
     return render_template('pages/profile/index.html', title='Profile', user=user)
 
 
+@userbp.route('/request/<string:user>')
+def req_service(user):
+    user = models.User.query.filter_by(email=user).first()
+    return render_template('pages/profile/request.html', title='Request Person', user=user)
+
+
 @userbp.route('/forgot', methods=['GET', 'POST'])
 def forgot():
     form = user_forms.Forgot()
