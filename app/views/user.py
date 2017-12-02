@@ -152,3 +152,8 @@ def reset(token):
             flash('Unknown email address.', 'negative')
             return redirect(url_for('userbp.forgot'))
     return render_template('user/reset.html', form=form, token=token)
+
+@userbp.route('/', methods=['GET'])
+def users():
+    models.user.query.all()
+    
