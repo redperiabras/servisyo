@@ -111,7 +111,8 @@
 	padding: 3px;
 	font-size: 35px;
 	position: fixed;
-	bottom: 100px;
+	/*bottom: 100px;*/
+	top: 70%;
 	/*background-color: blue;*/
 	left: 40%;
 	box-shadow: 0 5px 3px gray;
