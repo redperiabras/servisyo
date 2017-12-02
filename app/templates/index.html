@@ -3,9 +3,9 @@
 {% block head %}
     {{ super() }}
      <!-- Leaflet JS -->
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <script src='{{ url_for('static', filename='js/mapbox.js') }}'></script>
     <!-- Leaflet CSS -->
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet'/>
+    <link href='{{ url_for('static', filename='css/mapbox.css') }}' rel='stylesheet'/>
     <!-- Map style -->
     <style>
     #map {
@@ -44,7 +44,7 @@
             null,
             {position: 'topleft'}
         ).addTo(map);
-        map.setView({{[48.8534100, 2.3488000]}}, 13);
+        map.setView({{[14.5504938,120.9896386]}}, 13);
 
         markers = [];
 

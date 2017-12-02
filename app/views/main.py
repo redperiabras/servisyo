@@ -16,8 +16,8 @@ def map():
 
 @app.route('/map/refresh', methods=['POST'])
 def map_refresh():
-    points = [(random.uniform(48.8434100, 48.8634100),
-               random.uniform(2.3388000, 2.3588000))
+    points = [(random.uniform(14.5504938, 14.6004938),
+               random.uniform(120.9896386,  120.9996386))
               for _ in range(random.randint(2, 9))]
     return jsonify({'points': points})
 
