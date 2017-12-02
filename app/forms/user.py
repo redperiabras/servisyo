@@ -1,5 +1,5 @@
 from flask.ext.wtf import Form
-from wtforms import TextField, PasswordField
+from wtforms import TextField, PasswordField, SelectField
 from wtforms.validators import (Required, Length, Email, ValidationError,
                                 EqualTo)
 from app.models import User
@@ -64,6 +64,12 @@ class SignUp(Form):
                      description='Name')
     last_name = TextField(validators=[Required(), Length(min=2)],
                         description='Surname')
+    gender = SelectField(
+        'Gender',
+        choices=[('M', 'Male'), ('F', 'Female')]
+    )
+    profession = TextField(validators=[Required()],
+                      description='Profession')
     phone = TextField(validators=[Required(), Length(min=6)],
                       description='Phone number')
     email = TextField(validators=[Required(), Email(),
@@ -71,6 +77,7 @@ class SignUp(Form):
                                          'This email address is ' +
                                          'already linked to an account.')],
                       description='Email address')
+
     password = PasswordField(validators=[
         Required(), Length(min=6),
         EqualTo('confirm', message='Passwords must match.')
