@@ -89,7 +89,13 @@
 
         infoWindow = new google.maps.InfoWindow;
 
-        // Try HTML5 geolocation.
+        var marker = new google.maps.Marker({
+			  position: {lat: 14.551335, lng: 120.9871093},
+			  animation: google.maps.Animation.BOUNCE,
+			  map: map
+		});
+
+   //      // Try HTML5 geolocation.
    //      if (navigator.geolocation) {
    //        navigator.geolocation.getCurrentPosition(function(position) {
    //          var pos = {
@@ -102,8 +108,10 @@
 
    //          var marker = new google.maps.Marker({
 			//   position: pos,
+			//   animation: google.maps.Animation.BOUNCE,
 			//   map: map
 			// });
+
 
    //        }, function() {
    //          handleLocationError(true, infoWindow, map.getCenter());
@@ -131,11 +139,12 @@
             text.textContent = profession;
             infowincontent.appendChild(text);
 
-		    var icon = gender || {};
+		    var icon = profession[0] || {};
 		    var marker = new google.maps.Marker({
 		    	map: map,
 		    	position: point,
-		    	label: icon
+		    	label: icon,
+		    	title: profession
 		    });
 		    marker.addListener('click', function(){
 		    	infoWindow.setContent(infowincontent);

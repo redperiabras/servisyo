@@ -23,16 +23,17 @@
 	</head>
 
 	<body id="container">
-
+		{% if current_user.is_authenticated %}
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="side-navigation">
 			<h3>Servisyo</h3>
-			<a href="#">My Profile</a>
+			<a href="/user/account">My Profile</a>
 			<a href="#">Requests</a>
-			<a href="#">Signout</a>
+			<a href="/user/signout">Signout</a>
 		</nav>
 		<div class="top-nav">
 			<button id="showRight">Side Menu</button>
 		</div>
+		{% endif %}
 
    		<div id="body" class="body">
    			{% block content %}{% endblock %}
