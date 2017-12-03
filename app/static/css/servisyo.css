@@ -99,8 +99,10 @@
 	margin: 5px;
 	border-radius: 3px;
 	border: 0;
-	height: 80px;
+	height: 70px;
 	width: 270px;
+	font-size: 25px;
+	padding-left: 10px;
 }
 
 .search-btn {
