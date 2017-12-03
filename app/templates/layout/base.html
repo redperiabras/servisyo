@@ -27,18 +27,18 @@
 
 		{% if current_user.is_authenticated %}
 
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right navbar-fixed-top" id="cbp-spmenu-s2">
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
 				<div class="side-top">
-					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp img-circle" />
+					<img src="{{ url_for('static', filename='img/dp.png') }}" class="text-center dp" />=
 				</div>
 				<a href="{{ url_for('userbp.profile', user=current_user) }}" class="text-center">
 					<b>{{ current_user.first_name}} {{current_user.last_name}}</b>
 				</a>
-				<a href="/services?type={{ current_user.profession }}">Service Requests<span class="fa fa-bell pull-right"></span></a>
+				<a href="/looking-for">Service Requests<span class="fa fa-bell pull-right"></span></a>
 				<a href="/user/signout">Sign Out<span class="fa fa-sign-out pull-right"></span></a>
 			</nav>			
 			<div class="top-nav text-right">
-				<a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" /></a>
+				<img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" />
 				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>
@@ -51,7 +51,7 @@
 				<a href="/user/signup">Sign Up</a>
 			</nav>
 			<div class="top-nav text-right">
-				<a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" /></a>
+				<img src="{{ url_for('static', filename='img/logo.png') }}" class="proj-logo pull-left" />
 				<button id="showRightPush" class="navigator-btn">
 					<span class="fa fa-reorder"></span>
 				</button>
@@ -62,9 +62,7 @@
    		<div id="body" class="body">
    			{% block content %}{% endblock %}
    		</div>
-		
-
-		<!-- <div id="footer">
+		<div id="footer">
 			<div class="ui divider"></div>
 	    		<div class="ui divided horizontal footer link list">
 			      	<div class="item">
@@ -76,7 +74,7 @@
 	    		</div>
 	  		</div>
 		</div>
- -->
+
 		{% block scripts %}
 		{% endblock %}
 
