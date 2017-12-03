@@ -26,18 +26,18 @@ def searh_results():
             "first_name": "Stanleigh",
             "last_name": "Kinrade",
             "gender": "M",
-            "profession": "Mechanic",
-            "needs": "Mechanic",
+            "profession": "Plumber",
+            "needs": "Plumber",
             "lat": 14.553783,
             "lng": 120.992063,
-            "email": "stanleigh@gmail.com"
+            "email": "welder@gmail.com"
         }, 
         {
             "first_name": "Syd",
             "last_name": "Jehaes",
             "gender": "M",
-            "profession": "Mechanic",
-            "needs": "Mechanic",
+            "profession": "Plumber",
+            "needs": "Plumber",
             "lat": 14.551825, 
             "lng": 120.991383,
             "email": "syd@gmail.com"
@@ -46,7 +46,7 @@ def searh_results():
             "first_name": "Dorree",
             "last_name": "Pluck",
             "gender": "F",
-            "profession": "Mechanic",
+            "profession": "Plumber",
             "needs": "Housekeeper",
             "lat": 14.552051, 
             "lng": 120.992116,
