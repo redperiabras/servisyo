@@ -83,7 +83,7 @@
 	text-align: center;
 	background-color: none;
 	position: fixed;
-	top: 50%;
+	top: 60%;
 }
 
 .search-board-container {
@@ -99,6 +99,8 @@
 	margin: 5px;
 	border-radius: 3px;
 	border: 0;
+	height: 80px;
+	width: 270px;
 }
 
 .search-btn {
@@ -112,7 +114,7 @@
 	font-size: 35px;
 	position: fixed;
 	/*bottom: 100px;*/
-	top: 70%;
+	top: 80%;
 	/*background-color: blue;*/
 	left: 40%;
 	box-shadow: 0 5px 3px gray;
