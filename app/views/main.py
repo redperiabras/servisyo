@@ -67,3 +67,7 @@ def profile_reviews():
 @app.route('/profile/services')
 def profile_services():
     return render_template('pages/profile/services.html', title='Services')
+
+@app.route('/looking-for')
+def lookingfor():
+    return render_template('pages/looking-for.html', title='Service')
